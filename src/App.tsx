@@ -46,17 +46,35 @@ function App() {
             {Object.keys(users).map((username, index) => {
               const { address, email } = users[username];
               return (
-                <tr
-                  key={username}
-                  style={{cursor: "pointer"}}
-                  data-bs-toggle="modal"
-                  data-bs-target="#userDetailsModal"
-                  onClick={() => setFocusedUser(username)}
-                >
-                  <th scope="row">{index + 1}</th>
-                  <td>{username}</td>
-                  <td>{address}</td>
-                  <td>{email}</td>
+                <tr key={username} onClick={() => setFocusedUser(username)}>
+                  <th
+                    data-bs-toggle="modal"
+                    data-bs-target="#userDetailsModal"
+                    style={{ cursor: "pointer" }}
+                  >
+                    {index + 1}
+                  </th>
+                  <td
+                    data-bs-toggle="modal"
+                    data-bs-target="#userDetailsModal"
+                    style={{ cursor: "pointer" }}
+                  >
+                    {username}
+                  </td>
+                  <td
+                    data-bs-toggle="modal"
+                    data-bs-target="#userDetailsModal"
+                    style={{ cursor: "pointer" }}
+                  >
+                    {address}
+                  </td>
+                  <td
+                    data-bs-toggle="modal"
+                    data-bs-target="#userDetailsModal"
+                    style={{ cursor: "pointer" }}
+                  >
+                    {email}
+                  </td>
                   <td>
                     <button
                       className="btn p-0"
